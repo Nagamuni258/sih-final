@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sikkim Accommodations</title>
+    <title>Sikkim Accommodations with Video Hero</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
@@ -14,27 +14,75 @@
         }
         
         body {
-            background: linear-gradient(135deg, #e6f0ff 0%, #c9e0ff 100%);
-            color: #2c3e50;
+            color: #1c1d1d;
             line-height: 1.6;
-            padding: 20px;
             min-height: 100vh;
+            position: relative;
+        }
+        
+        /* Video Background */
+        .video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+        
+        .video-background video {
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            object-fit: cover;
+        }
+        
+        .video-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
         }
         
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
+            position: relative;
+            z-index: 1;
         }
         
-        header {
+        /* Hero Section */
+        .hero {
             text-align: center;
             margin-bottom: 40px;
-            padding: 30px 20px;
-            background: linear-gradient(120deg, #2c3e50, #4a6491);
+            padding: 60px 20px;
+            background: rgba(13, 13, 14, 0.85);
             border-radius: 15px;
             color: white;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(5px);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(120deg, rgba(0, 0, 0, 0.7), rgba(20, 21, 21, 0.7));
+            z-index: -1;
         }
         
         h1 {
@@ -56,12 +104,13 @@
         
         .section-title {
             font-size: 2rem;
-            color: #2c3e50;
+            color: white;
             text-align: center;
             margin-bottom: 30px;
             padding-bottom: 10px;
-            border-bottom: 3px solid #3498db;
+            border-bottom: 3px solid #171717;
             display: inline-block;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
         }
         
         .cards-container {
@@ -73,10 +122,10 @@
         }
         
         .card {
-            background: white;
+            background: rgba(255, 255, 255, 0.95);
             border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
             transition: all 0.3s ease;
             max-width: 380px;
             cursor: pointer;
@@ -84,7 +133,7 @@
         
         .card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
         }
         
         .card-image {
@@ -115,14 +164,14 @@
         }
         
         .card p {
-            color: #34495e;
+            color: #1c1d1e;
             margin-bottom: 20px;
             line-height: 1.6;
         }
         
         .learn-more {
             display: inline-block;
-            background: #3498db;
+            background: #131313;
             color: white;
             padding: 12px 25px;
             border-radius: 50px;
@@ -132,7 +181,7 @@
         }
         
         .learn-more:hover {
-            background: #2980b9;
+            background: #121313;
         }
         
         /* Modal Styles */
@@ -212,9 +261,9 @@
         
         .modal-title {
             font-size: 2.2rem;
-            color: #2c3e50;
+            color: #000000;
             margin-bottom: 20px;
-            border-bottom: 2px solid #3498db;
+            border-bottom: 2px solid #000000;
             padding-bottom: 10px;
         }
         
@@ -232,7 +281,7 @@
         }
         
         .highlight h3 {
-            color: #2c3e50;
+            color: #060707;
             margin-bottom: 15px;
             font-size: 1.5rem;
         }
@@ -251,13 +300,13 @@
         
         .feature i {
             font-size: 24px;
-            color: #3498db;
+            color: #000000;
             margin-right: 15px;
             width: 30px;
         }
         
         .price-tag {
-            background: #2c3e50;
+            background: #0d0e0e;
             color: white;
             padding: 15px 25px;
             border-radius: 8px;
@@ -269,7 +318,7 @@
         
         .cta-button {
             display: inline-block;
-            background: #3498db;
+            background: #000000;
             color: white;
             padding: 15px 30px;
             border-radius: 50px;
@@ -280,7 +329,7 @@
         }
         
         .cta-button:hover {
-            background: #2980b9;
+            background: #141414;
         }
         
         .image-gallery {
@@ -311,10 +360,11 @@
             text-align: center;
             margin-top: 50px;
             padding: 30px;
-            color: #7f8c8d;
-            background: white;
+            color: white;
+            background: rgba(25, 26, 26, 0.85);
             border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(5px);
         }
         
         @media (max-width: 768px) {
@@ -338,15 +388,37 @@
             .image-gallery {
                 grid-template-columns: repeat(2, 1fr);
             }
+            
+            .hero {
+                padding: 40px 15px;
+            }
+            
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            .subtitle {
+                font-size: 1.1rem;
+            }
         }
     </style>
 </head>
 <body>
+    <!-- Video Background -->
+    <div class="video-background">
+        <video autoplay muted loop>
+            <!-- Using a placeholder video from Pexels -->
+            <source src="bg.mp4">  Your browser does not support the video tag.
+        </video>
+        <div class="video-overlay"></div>
+    </div>
+    
     <div class="container">
-        <header>
+        <!-- Hero Section -->
+        <section class="hero">
             <h1>Places to Stay</h1>
             <p class="subtitle">Discover the perfect accommodation for your Sikkim adventure, from luxury resorts to authentic homestays</p>
-        </header>
+        </section>
         
         <section class="accommodation-section">
             <h2 class="section-title">Featured Accommodations</h2>
@@ -381,7 +453,7 @@
                         <img src="https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&h=400&q=80" alt="Garden Homestay">
                     </div>
                     <div class="card-content">
-                        <h2>Garden Homestay</h2>
+                        <h2>Tea Garden Homestay</h2>
                         <p>Immerse yourself in local culture with a family-run homestay featuring organic gardens and traditional hospitality.</p>
                         <a class="learn-more">Learn More</a>
                     </div>
@@ -545,7 +617,7 @@
                     <span class="close-btn" onclick="closeModal('homestayModal')">&times;</span>
                 </div>
                 <div class="modal-body">
-                    <h2 class="modal-title">Garden Homestay</h2>
+                    <h2 class="modal-title">Tea Garden Homestay</h2>
                     <p class="modal-text">Experience authentic Sikkimese hospitality at our family-run homestay surrounded by lush organic gardens. Our homestay offers a unique opportunity to live with a local family, participate in daily activities, and enjoy home-cooked traditional meals.</p>
                     
                     <div class="highlight">
@@ -591,7 +663,7 @@
                     <h3>Photo Gallery</h3>
                     <div class="image-gallery">
                         <div class="gallery-image">
-                            <img src="https://images.unsplash.com/photo-1555854877-bab0e378b2a3?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&h=300&q=80" alt="Homestay Room">
+                            <img src="stay3.jpg" alt="Homestay Room">
                         </div>
                         <div class="gallery-image">
                             <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&h=300&q=80" alt="Home Cooked Meal">
