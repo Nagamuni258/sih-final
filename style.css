@@ -1,0 +1,416 @@
+/* Custom styles to enhance the theme */
+        body {
+            font-family:  sans-serif black;
+            background-color: #ffffff;
+            color: #2b2828; /* A slightly softer black */
+        }
+        /* Style for the fixed parallax-like background images */
+        .bg-fixed-image {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        /* Smooth scrolling behavior */
+        html {
+            scroll-behavior: smooth;
+        }
+        /* Slideshow animation */
+        .slide-fade {
+            animation: fade 1.5s ease-in-out;
+        }
+        @keyframes fade {
+            from { opacity: 0.4; }
+            to { opacity: 1; }
+        }
+.navbar {
+    background-color: rgba(177, 175, 175, 0.2);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    position: absolute;
+    width: 90%;
+    top: 20px;
+    left: 64px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    gap: 20px; /* Add space between a links */
+    flex-direction: row;
+    justify-content: flex-end;
+
+}
+.logo-pos{
+    position: absolute;
+    left: 50px;
+    
+}
+.navbar-settings {
+    position: relative;
+    left: 250px;
+}
+.navbarsett{
+    font-size: 16px;
+}
+
+
+
+.containerpack{
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    width: 80%;
+    position: relative;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+/* Responsive adjustments */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                padding: 10px 0;
+            }
+            .navbar a {
+                margin: 10px 0;
+                font-size: 14px;
+            }
+        }
+        @media (max-width: 480px) {
+            .navbar a {
+                font-size: 12px;
+            }
+        }
+        /* Additional custom styles can be added here */
+        .bg-absolute-image {
+            background-attachment: scroll;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+.belowcardscontainer {
+     background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    gap: 10px;
+    z-index: 70;
+    width: 90%;
+    height: 1650px;
+    margin: 0 auto;/* This centers the div horizontally */
+  
+}
+.cards-p {
+    font-weight: bold;
+    font-size: 24px;
+    text-align: center;
+    position: absolute;
+    top: 35px;
+}
+.cards-p1 {
+    font-weight: bold;
+    font-size: 24px;
+    text-align: center;
+    position: absolute;
+    top: 120px;
+}
+.cards-p3 {
+    font-weight: bold;
+    font-size: 24px;
+    text-align: center;
+    position: absolute;
+    top: 750px;
+}
+.blwcards-box {
+    display: flex;
+    flex-direction: row;
+    width: 95%;
+    border-radius: 15px;
+    gap: 24px;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.blwcards-explore {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    border-radius: 15px;
+    gap: 24px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+    position: relative;
+    left: 10px;
+    top: 60px;
+}
+.blwcards-box1, .blwcards-box2, .blwcards-box3{
+    display: flex;
+    height: 500px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 15px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
+    position: relative;
+    bottom: 450px;
+    width: 400px;
+    padding-top: 0;
+    justify-content: space-evenly;
+}
+
+.box1-text {
+    font-size: 18px;
+    color: #2b2828;
+    text-align: center;
+    padding: 20px;
+    font-weight: bold;
+    position: absolute;
+    top: 250px;
+}
+.box1-p {
+    font-size: 14px;
+    color: #2b2828;
+    text-align: center;
+    padding: 10px 20px;
+    position: absolute;
+    top: 300px;
+}
+.box1-btn {
+    background-color: #2b2828;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    position: absolute;
+    top: 400px;
+    left: 140px;
+    text-decoration: none;
+}
+.box1-btn:hover {
+    background-color: #ffffff;
+    color: black;
+}
+
+.box1-btn1 {
+    background-color: #2b2828;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 35px;
+    font-size: 14px;
+    cursor: pointer;
+    position: absolute;
+    top: 630px;
+    left: 30px;
+    text-decoration: none;
+}
+
+.blwcards-boxes{
+    display: flex;
+    flex-direction: row;
+    width: 95%;
+    border-radius: 15px;
+    gap: 24px;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    position: relative;
+    bottom: 400px;
+    right: 500px;
+}
+.blwcards-places{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    border-radius: 15px;
+    gap: 24px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 60px;
+    position: relative;
+    left: 10px;
+    bottom: 100px;
+}
+.blwcards-box4{
+   display: flex;
+    height: 700px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 15px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 100px;
+    right: 30px;
+    transform: translateX(-350px);
+    padding-top: 0;
+    width: 400px;
+}
+.place1{
+    position: absolute;
+    top: 0;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+.blwcards-box5{
+    display: flex;
+    height: 700px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 15px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 100px;
+    left: 0px;
+    transform: translateX(-350px);
+    padding-top: 0;
+    width: 400px;
+}
+.blwcards-box6{
+    display: flex;
+    height: 700px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 15px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 100px;
+    left:75px;
+    width: 400px;
+    padding-top: 0;
+    justify-content: space-evenly;
+}
+.box1-det{
+    font-size: 20px;
+    font-weight: bold;
+    position: absolute;
+    top: 270px;
+    left: 20px;
+
+}
+
+.box1-det1{
+    
+    position: absolute;
+    top: 320px;
+    left: 35px;
+}
+.box1-det2{
+    
+    position: absolute;
+    top: 360px;
+    left: 20px;
+}
+.box1-det3{
+    
+    position: absolute;
+    top: 410px;
+    left: 20px;
+}
+.box1-det4{
+    font-weight: bold;
+    position: absolute;
+    top: 440px;
+    left: 20px;
+}
+.box1-det5{
+    
+    position: absolute;
+    top: 470px;
+    left: 20px;
+}
+.box1-det6{
+    font-weight: bold;
+    position: absolute;
+    top: 520px;
+    left: 20px;
+}
+.box1-det7{
+    
+    position: absolute;
+    top: 560px;
+    left: 20px;
+}
+
+.blwcards-placetostay{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    border-radius: 15px;
+    gap: 24px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+    position: relative;
+    left: 510px;
+    top: 400px;
+}
+.blwcards-weekend{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    border-radius: 15px;
+    gap: 24px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+    position: relative;
+    left: 510px;
+    top: 700px;
+    
+}
+
+
+.gradio-container {
+    background-color: #121212;
+    color: white;
+    font-family: 'Segoe UI', sans-serif;
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+}
+.gr-chat-interface {
+    height: 100vh !important;
+    display: flex;
+    flex-direction: column;
+}
+.gr-chatbot {
+    height: 75vh !important;
+    font-size: 16px;
+}
+textarea {
+    height: 60px !important;
+    font-size: 16px !important;
+}
+button {
+    font-size: 16px !important;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px); /* starts slightly shifted down */
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.fotter{
+    background-color: black;
+    height: 100px;
+    width: 100%;
+}

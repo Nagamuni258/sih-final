@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoSikkim - Your Digital Gateway to Sikkim's Monasteries</title>
+    <!-- Tailwind CSS for modern, responsive styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts for a clean, modern look -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">"
+   
+</head>
+<body class="bg-white" >
+    <script type="text/javascript">
+  (function(d, t) {
+      var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
+      v.onload = function() {
+        window.voiceflow.chat.load({
+          verify: { projectID: '68cafc75b44a5572bc7d059c' },
+          url: 'https://general-runtime.voiceflow.com',
+          versionID: 'production',
+          voice: {
+            url: "https://runtime-api.voiceflow.com"
+          }
+        });
+      }
+      v.src = "https://cdn.voiceflow.com/widget-next/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
+  })(document, 'script');
+</script>
+    <video src="bg.mp4" autoplay muted loop class="fixed inset-0 w-full h-full object-cover z-0"></video>
+
+
+    
+
+        <!-- Header with Integrated Navigation -->
+       <header class="navbar z-50 flex justify-center" style="opacity:0; transform: translateY(-100px); transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.4,0,0.2,1);">
+    <div class="container flex flex-col justify-between items-center p-3 w-full">
+
+        <!-- Logo -->
+        <div class="logo-pos text-2xl md:text-3xl font-bold text-black">
+            <a href="index.html" target="_self">GoSikkim</a>
+        </div>
+
+        <!-- Desktop Navigation -->
+        <nav class="navbar-settings hidden md:flex flex-row space-x-8">
+            <a href="#holiday-ideas" class="text-black font-bold py-2 px-2">Holiday Ideas</a>
+            <a href="#packages" class="text-black font-bold py-2 px-2 ">Packages</a>
+            <a href="#places-to-stay" class=" text-black font-bold py-2 px-2">Places to Stay</a>
+            <a href="#weekend-getaways" class=" text-black font-bold py-2 px-2 ">Weekend Getaways</a>
+            <a href="index2.html" class=" text-black font-bold py-2 px-2 ">Map</a>
+            <a href="login.html" class="  border-2 border-black text-black font-bold py-2 rounded-lg px-6 hover:bg-black hover:text-white transition-colors duration-300">
+                Login
+            </a>
+        </nav>
+
+        <!-- Mobile Menu Button -->
+        <div class="md:hidden">
+            <button id="mobile-menu-button" class="text-black focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white">
+        <nav class="flex flex-col items-center space-y-4 p-4 border-t border-gray-200">
+            <a href="#holiday-ideas" class="mobile-nav-link text-gray-800 hover:text-black font-semibold">Holiday Ideas</a>
+            <a href="#packages" class="mobile-nav-link text-gray-800 hover:text-black font-semibold">Packages</a>
+            <a href="#places-to-stay" class="mobile-nav-link text-gray-800 hover:text-black font-semibold">Places to Stay</a>
+            <a href="#weekend-getaways" class="mobile-nav-link text-gray-800 hover:text-black font-semibold">Weekend Getaways</a>
+            <a href="#map" class="mobile-nav-link text-gray-800 hover:text-black font-semibold">Map</a>
+            <a href="login.html" target="_self"
+                class="mt-4 w-full text-center border-2 border-black text-black font-bold py-2 px-6 rounded-lg hover:bg-black hover:text-white transition-colors duration-300">
+                Login
+            </a>
+        </nav>
+    </div>
+</header>
+
+<script>
+window.addEventListener('DOMContentLoaded', function () {
+    var navbar = document.querySelector('.navbar');
+    setTimeout(function () {
+        navbar.style.opacity = '1';
+        navbar.style.transform = 'translateY(0)';
+    }, 100);
+});
+</script>
+
+
+        <!-- Landing Section -->
+        <section class="relative h-screen flex items-center justify-center">
+            <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+            <!-- Image Slideshow (Right on Desktop) -->
+            <div class="relative w-full h-64 md:h-96 rounded-lg shadow-2xl overflow-hidden z-10 md:order-last " style="border-radius: 25px;">
+            <div id="slideshow-container">
+            <!-- Images will be dynamically inserted here by JavaScript -->
+            </div>
+            </div>
+            <!-- Website Info (Left on Desktop) -->
+            <div class="text-center md:text-left z-10 md:order-first landing-text" style="opacity:0; transform: translateY(100px); transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.4,0,0.2,1);">
+            <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-4">
+            Discover Sikkim's<br>Spiritual Heritage.
+            </h1>
+            <p class="text-lg md:text-xl text-gray-700 max-w-lg mx-auto md:mx-0">
+            <strong>Monastery360:</strong> Your all-in-one digital platform to explore Sikkim's ancient monasteries through immersive virtual tours, digital archives, and smart audio guides.
+            </p>
+            </div>
+            </div>
+        </section>
+        <script>
+        window.addEventListener('DOMContentLoaded', function() {
+            var landingText = document.querySelector('.landing-text');
+            setTimeout(function() {
+            landingText.style.opacity = '1';
+            landingText.style.transform = 'translateY(0)';
+            }, 300);
+        });
+        </script>
+        
+        
+        <!-- Main Content -->
+        <main>
+
+            <!-- Packages Section -->
+            <section id="packages" class="py-20 bg-gray-50" >
+                <div class="containerpack mx-auto text-center px-6 border-radius: 20px; backdrop-blur-sm p-9 shadow-lrg;">
+                    <h2 class="text-4xl font-bold mb-4">Curated Packages</h2>
+                    <p class="text-lg text-gray-600 mb-12 max-w-2xl mx-auto">Explore Sikkim with our expertly designed packages, whether you seek spiritual solace, adventure, or cultural immersion.</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <!-- Package Card 1 -->
+                        <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300 opacity-0.1">
+                            <img src="360.jpg" alt="Monastery Tour" class="w-full h-56 object-cover transform hover:scale-105 hover:blur-sm transition-all duration-300">
+                            <div class="p-6 text-center">
+                                <h3 class="text-2xl font-bold mb-2">Monastery 360° Tour</h3>
+                                <p class="text-gray-700">An immersive journey through the most sacred monasteries. Includes guided virtual and on-site tours with our smart audio guide app.</p>
+                            </div>
+                        </div>
+                        <!-- Package Card 2 -->
+                        <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+                            <img src="moutains.jpg" alt="Himalayan Trek" class="w-full h-56 object-cover transform hover:scale-105 hover:blur-sm transition-all duration-300">
+                            <div class="p-6 text-center">
+                                <h3 class="text-2xl font-bold mb-2">Himalayan Adventure</h3>
+                                <p class="text-gray-700">Combine spiritual exploration with thrilling treks across Sikkim's breathtaking landscapes and high-altitude lakes.</p>
+                            </div>
+                        </div>
+                        <!-- Package Card 3 -->
+                        <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+                            <img src="cultural.jpg" alt="Cultural Festival" class="w-full h-56 object-cover transform hover:scale-105 hover:blur-sm transition-all duration-300">
+                            <div class="p-6 text-center">
+                                <h3 class="text-2xl font-bold mb-2">Cultural Immersion</h3>
+                                <p class="text-gray-700">Experience local life, taste authentic cuisine, and participate in vibrant festivals and rituals with our exclusive cultural packages.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+    <!-- Below Cards Container -->
+    <div class="belowcardscontainer relative">
+        <p class="cards-p text-gray-800 text-lg rounded-xl px-6 py-4 shadow-md backdrop-blur-md">
+            Discover more packages and customize your Sikkim experience with us!
+        </p>
+         <p class="cards-p1 text-gray-800 text-lg rounded-xl px-6 py-4 shadow-md backdrop-blur-md">
+            Holiday Ideas
+        </p>
+        <p class="cards-p3 text-gray-800 text-lg rounded-xl px-6 py-4 shadow-md backdrop-blur-md">
+            Places to Stay</p>
+        <div class="blwcards-box relative top-0 z-30">
+            <div class="blwcards-explore ">
+            <div class="blwcards-box1 ">
+                <img src="https://c.myholidays.com/blog/2024/5/161019_Trekking4-ezgif.com-jpg-to-webp-converter.webp" alt="Adventure Trekking" class="w-full h-64 object-cover rounded-lg shadow-lg transform hover:scale-105  transition-all duration-300">
+                  <p class="box1-text">Adventure Trekking</p>
+                    <p class="box1-p"> Conquer the Himalayan trails with guided trekking expeditions to Kanchenjunga base camp, Goecha La, and pristine alpine valleys.</p>
+                <button href="" class="box1-btn absolute">
+                    Learn More
+                </button>
+                </div>
+            <div class="blwcards-box2 ">
+             <img src="box1.jpg" alt="Photography Tours" class="w-full h-64 object-cover rounded-lg shadow-lg transform hover:scale-105  transition-all duration-300">
+                  <p class="box1-text">Photography Tours</p>
+                    <p class="box1-p"> Capture the mystical beauty of ancient monasteries, prayer flags, and snow-capped peaks with professional photography guidance.</p>
+                <button href="" class="box1-btn absolute">
+                    Learn More
+                </button>
+            </div>
+            <div class="blwcards-box3 ">
+            <img src="https://rudraspiritualpursuits.com/wp-content/uploads/2023/02/2.Spritual-Retreat.png" alt="Wellness Retreats" class="w-full h-64 object-cover rounded-lg shadow-lg transform hover:scale-105  transition-all duration-300">
+                  <p class="box1-text">Wellness Retreats</p>
+                    <p class="box1-p"> Find inner peace through meditation sessions in serene monasteries, yoga practices, and traditional healing therapies.</p>
+                <button href="" class="box1-btn absolute">
+                    Learn More
+                </button>
+            </div>
+            </div>
+       <div class="blwcards-boxes relative top-0 z-30">
+        <div class="blwcards-places ">
+            <div class="blwcards-box4 ">
+               <img src="stay1.jpg" alt="Homestays" class="w-full h-64  object-cover rounded-lg shadow-lg transform hover:scale-105  transition-all duration-300">
+                  <p class="box1-det absolute left-6 top-70">Himalayan Heritage Resort</p>
+                    <p class="box1-det1 absolute left-7 top-70">📍Gangtok</p>
+     <p class="box1-det2 absolute">               
+Experience luxury amidst the Himalayas with panoramic mountain views and world-class amenities.
+     </p>
+<p class="box1-det4 absolute left-7 top-70">Amenities:</p>
+<p class="box1-det5 absolute left-7 top-70">
+Mountain View
+Spa & Wellness
+Airport Transfer
+<p class="box1-det6 absolute left-7 top-70">Special Features:
+</p>
+<p class="box1-det7 absolute left-7 top-70">
+24/7 Room Service
+Traditional Architecture
+Yoga Classes
+Cultural Programs</p>
+                <button href="" class="box1-btn1 absolute">
+                    Book Now
+                </button>
+            </div>
+            <div class="blwcards-box5 ">
+                <img src="stay2.jpg" alt="Homestays" class="w-full h-64  object-cover rounded-lg shadow-lg transform hover:scale-105  transition-all duration-300">
+                  <p class="box1-det absolute left-6 top-70">Monastery View Lodge</p>
+                    <p class="box1-det1 absolute left-7 top-70">📍Pelling</p>
+     <p class="box1-det2 absolute">               
+Stay in a traditional lodge overlooking ancient monasteries with authentic Sikkimese hospitality.
+ </p>
+<p class="box1-det4 absolute left-7 top-70">Amenities:</p>
+<p class="box1-det5 absolute left-7 top-70">
+Monastery Views
+Traditional Meals
+Guided Tours
+<p class="box1-det6 absolute left-7 top-70">Special Features:
+</p>
+<p class="box1-det7 absolute left-7 top-70">
+Cultural Immersion
+Prayer Wheel Garden
+Local Cuisine
+Meditation Hall</p>
+<button href="" class="box1-btn1 absolute">
+                    Book Now
+                </button>
+            </div>
+            <div class="blwcards-box6 ">
+                <img src="stay3.jpg" alt="Homestays" class="w-full h-64  object-cover rounded-lg shadow-lg transform hover:scale-105  transition-all duration-300">
+                  <p class="box1-det absolute left-6 top-70">Tea Garden Homestay</p>
+                    <p class="box1-det1 absolute left-7 top-70">📍Temi</p>
+     <p class="box1-det2 absolute">               
+Live with local families in the heart of tea gardens and experience authentic rural life</p>
+<p class="box1-det4 absolute left-7 top-70">Amenities:</p>
+<p class="box1-det5 absolute left-7 top-70">
+Organic Meals
+Tea Tasting
+Farm Activities
+<p class="box1-det6 absolute left-7 top-70">Special Features:
+</p>
+<p class="box1-det7 absolute left-7 top-70">
+Family Experience
+Sustainable Tourism
+Local Crafts
+Fresh Air</p><button href="" class="box1-btn1 absolute">
+                    Book Now
+                </button>
+            </div>
+        </div>
+       </div>
+       </div>
+        </div>
+    </div>
+
+    
+
+        </main>
+    </div>
+    <script src="main.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const faders = document.querySelectorAll(".fade-in");
+
+  const appearOptions = {
+    threshold: 0.2, // 20% visible
+    rootMargin: "0px 0px -50px 0px" // start fading slightly before fully in view
+  };
+
+  const appearOnScroll = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+        observer.unobserve(entry.target); // optional: run once
+      }
+    });
+  }, appearOptions);
+
+  faders.forEach(fader => {
+    appearOnScroll.observe(fader);
+  });
+});
+</script>
+<footer class="fotter text-white  relative z-50"></footer>
+    <div class="container text-center">
+        <p>&copy; 2024 GoSikkim. All rights reserved.</p>
+        <p class="mt-2">Designed with ❤️ for Sikkim's spiritual heritage.</p>
+    </div>  
+</footer>
+</body>
+</html>
